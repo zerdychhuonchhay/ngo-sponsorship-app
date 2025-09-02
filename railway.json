@@ -1,0 +1,17 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksConfig": {
+      "start": {
+        "cmd": "gunicorn ngo_project.wsgi"
+      }
+    },
+    "rootDir": "/backend"
+  },
+  "deploy": {
+    "startCommand": "gunicorn ngo_project.wsgi",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
