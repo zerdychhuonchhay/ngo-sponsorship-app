@@ -84,12 +84,9 @@ WSGI_APPLICATION = 'ngo_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-# This configuration reads the DATABASE_URL from Railway's environment
-# and falls back to a local sqlite database if it's not found.
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', f'sqlite:///{BASE_DIR / "db.sqlite3"}')
-    )
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
