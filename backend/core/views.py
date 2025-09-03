@@ -32,3 +32,9 @@ class TransactionViewSet(viewsets.ModelViewSet):
 class GovernmentFilingViewSet(viewsets.ModelViewSet):
     queryset = GovernmentFiling.objects.all()
     serializer_class = GovernmentFilingSerializer
+
+# backend/core/views.py
+# ... keep all the existing code at the top of the file ...
+
+# Add this new code at the bottom
+from django.http import HttpResponse
