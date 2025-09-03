@@ -7,11 +7,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- SECURITY WARNING: keep the secret key used in production secret! ---
 # We get the secret key from the Railway environment variables.
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# For local development, it can be a simple string.
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-development-key')
 
 # --- SECURITY WARNING: don't run with debug turned on in production! ---
-# We get the DEBUG value from Railway variables. Defaults to False.
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# We get the DEBUG value from Railway variables. Defaults to True for local dev.
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # --- ALLOWED HOSTS ---
 # This is a security setting for the production environment.
