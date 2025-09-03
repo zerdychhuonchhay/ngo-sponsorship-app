@@ -7,7 +7,7 @@
         "cmd": "gunicorn ngo_project.wsgi"
       }
     },
-    "rootDir": "/backend"
+    "rootDir": "backend"
   },
   "deploy": {
     "startCommand": "python manage.py migrate && gunicorn ngo_project.wsgi",
