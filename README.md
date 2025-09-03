@@ -22,6 +22,13 @@ Database: PostgreSQL
 
 Deployment: Railway.app
 
+Deployment
+The backend API for this project is live and deployed on Railway.
+
+Live API Base URL: https://ngo-sponsorship-app-production.up.railway.app/
+
+Status: Phase 1 (Backend API) is complete and verified.
+
 Local Development Setup
 To run this project on your local machine, please follow these steps.
 
