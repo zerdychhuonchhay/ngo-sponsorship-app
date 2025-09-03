@@ -103,12 +103,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
-```
-
-**Step 4: Commit and Push the Final Fix**
-Now, save all these changes and push them to your `master` branch. This will trigger the final deployment on Railway.
-```bash
-git add .
-git commit -m "fix: Implement CORS configuration for frontend access"
-git push origin master
 
