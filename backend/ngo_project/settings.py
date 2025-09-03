@@ -14,8 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 # --- ALLOWED HOSTS ---
-# We get the allowed hosts from Railway's environment variables,
-# with a fallback for local development.
+# This is a security setting for the production environment.
 ALLOWED_HOSTS = ['*']
 
 
@@ -35,7 +34,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # CORS Middleware - place high up
+    'corsheaders.middleware.CorsMiddleware',  # CORS Middleware - Must be high up
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -92,7 +91,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # --- INTERNATIONALIZATION & STATIC FILES ---
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
-USE_I18N = True
+USE_I1N = True
 USE_TZ = True
 STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -104,4 +103,12 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+```
+
+**Step 4: Commit and Push the Final Fix**
+Now, save all these changes and push them to your `master` branch. This will trigger the final deployment on Railway.
+```bash
+git add .
+git commit -m "fix: Implement CORS configuration for frontend access"
+git push origin master
 
