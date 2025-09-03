@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-development-key
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # --- ALLOWED HOSTS ---
-# This is a security setting for the production environment.
+# This is a security setting. '*' allows all hosts for development and initial deployment.
 ALLOWED_HOSTS = ['*']
 
 
