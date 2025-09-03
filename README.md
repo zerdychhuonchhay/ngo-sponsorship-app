@@ -22,5 +22,32 @@ Database: PostgreSQL
 
 Deployment: Railway.app
 
+Local Development Setup
+To run this project on your local machine, please follow these steps.
+
+Clone the Repository
+
+git clone <your-repository-url>
+cd ngo-sponsorship-app
+
+Set Up and Run the Backend
+
+cd backend
+python -m venv venv
+# Activate the virtual environment
+# On Windows: venv\Scripts\activate
+# On macOS/Linux: source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+The backend server will be running at http://127.0.0.1:8000.
+
+Set Up and Run the Frontend (Future)
+
+cd frontend
+npm install
+npm start
+
 Getting Started
 For a complete breakdown of the project goals, learning plan, and technical architecture, please see the full_project_plan.md and ngo_mvp_plan.md documents.
