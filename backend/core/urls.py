@@ -6,7 +6,8 @@ from .views import (
     AcademicReportViewSet,
     FollowUpRecordViewSet,
     TransactionViewSet,
-    GovernmentFilingViewSet
+    GovernmentFilingViewSet,
+    test_view
 )
 
 router = DefaultRouter()
@@ -19,4 +20,5 @@ router.register(r'government-filings', GovernmentFilingViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('test/', test_view, name='test-view'),
 ]
