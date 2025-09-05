@@ -8,7 +8,7 @@ WORKDIR /app
 
 # --- Stage 3: Copy our code into the container ---
 # First, we copy only the requirements file. This is a clever optimization.
-COPY backend/requirements.txt .
+COPY requirements.txt .
 
 # --- Stage 4: Install the dependencies ---
 # Now, we install all the Python packages from our "shopping list".
@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # --- Stage 5: Copy the rest of our application code ---
 # Now that the dependencies are installed, we copy our entire backend folder.
-COPY backend/ .
+COPY . .
 
 # --- Stage 6: Define the command to run the application ---
 # This is the final command that tells the container how to start our Gunicorn server.
